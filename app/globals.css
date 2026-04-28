@@ -119,12 +119,63 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 }
+.cl-pricingTable {
+  grid-template-columns: auto auto auto !important;
+}
+
+/* index.css */
+
+/* 1. The Grid: Responsive columns (1 on mobile, 3 on desktop) */
+.cl-pricingTable {
+  display: grid !important;
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  gap: 1.5rem !important;
+}
+
+@media (min-width: 1024px) {
+  .cl-pricingTable {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+.cl-pricingTable {
+  display: grid !important;
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  gap: 1.5rem !important;
+}
+
+@media (min-width: 1024px) {
+  .cl-pricingTable {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* index.css */
+
+/* 1. Responsive Grid */
+.cl-pricingTable {
+  display: grid !important;
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  gap: 1.5rem !important;
+}
+
+@media (min-width: 1024px) {
+  .cl-pricingTable {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 2. The Card: No background, only Shadcn border */
+.cl-pricingTableCard {
+  /* background-color: transparent !important; No background */
+  border: 1px solid hsl(var(--border)) !important; /* Shadcn border */
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
+}
+
