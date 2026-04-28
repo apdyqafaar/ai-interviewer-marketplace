@@ -16,8 +16,8 @@ import { cn } from "@/lib";
 interface CreditButtonProps {
   credits: number;
   isInterviewer: boolean;
-  open:boolean
-  onOpenChange:(open:boolean)=>void
+  open?:boolean
+  onOpenChange?:(open:boolean)=>void
   className?:string
 }
 
